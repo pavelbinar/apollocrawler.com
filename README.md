@@ -1,12 +1,12 @@
-# microscratch
+# apollocrawler.com
 
-Light Weight Web Framework using node.js, mongo, sockets, ember.js ....
+[apollocrawler.com] website
 
 ## Project Status
 
-[![GitHub version](https://badge.fury.io/gh/korczis%2Fmicroscratch.png)](http://badge.fury.io/gh/korczis%2Fmicroscratch)
-[![Build Status](https://travis-ci.org/korczis/microscratch.png?branch=master)](https://travis-ci.org/korczis/microscratch)
-[![Total views](https://sourcegraph.com/api/repos/github.com/korczis/microscratch/counters/views.png)](https://sourcegraph.com/github.com/korczis/microscratch)
+[![GitHub version](https://badge.fury.io/gh/korczis%2Fapollocrawler.com.png)](http://badge.fury.io/gh/korczis%2Fapollocrawler.com)
+[![Build Status](https://travis-ci.org/korczis/apollocrawler.com.png?branch=master)](https://travis-ci.org/korczis/apollocrawler.com)
+[![Total views](https://sourcegraph.com/api/repos/github.com/korczis/apollocrawler.com/counters/views.png)](https://sourcegraph.com/github.com/korczis/apollocrawler.com)
 
 ## Features
 
@@ -35,11 +35,9 @@ Install npm modules.
 npm install
 ```
 
-apollocrawler.com
-=================
-
+Install bower components.
 ```
-Website for apollocrawler.com
+bower install
 ```
 
 Run tests.
