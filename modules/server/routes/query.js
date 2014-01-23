@@ -1,4 +1,4 @@
-﻿/*
+/*
  Copyright, 2013, by Tomas Korcak. <korczis@gmail.com>
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,38 +23,18 @@
 (function () {
     'use strict';
 
-    var deferred = require('deferred'),
-        fs = require('fs'),
-        path = require('path'),
-        utils = require('../utils');
+    var exports = module.exports = function(microscratch, app) {
 
-    /**
-     * Intializes router
-     * @param microscratch Microscratch app which this router belongs to
-     * @param app Express app which this router belongs to
-     */
-    module.exports.initialize = function (microscratch, app) {
-        var d = deferred();
+        app.get('/query', function (req, res) {
+            var col = microscratch.mongo.getCollection('datasets').then(function(coll) {
+                var q = req.query.q || "";
+                q = q.replace(" ", ".*");
 
-        var readdir = deferred.promisify(fs.readdir);
-
-        var self = this;
-        var routesDir = path.join(__dirname, './routes');
-        readdir(routesDir).then(function(files) {
-            console.log(files);
-
-            for(var i = 0; i < files.length; i++) {
-                var routePath = "./routes/" + files[i];
-
-                var route = require(routePath);
-                route(microscratch, app);
-            }
-
-            d.resolve(self);
+                coll.find({'value.data.name': new RegExp(q, "i")}).limit(10).toArray(function (err, data) {
+                    res.json(data);
+                });
+            });
         });
-
-        return d.promise();
-
     };
 
 }());
