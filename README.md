@@ -20,7 +20,7 @@
 Clone the sources.
 
 ```
-git clone https://github.com/korczis/microscratch.git
+git clone https://github.com/korczis/apollocrawler.com.git
 ```
 
 Enter the directory.
