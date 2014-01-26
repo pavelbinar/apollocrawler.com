@@ -23,21 +23,24 @@
 (function (global) {
     require
     (
-        ["ember", "app"], function (Ember, App) {
+        ["ember", "app", "jquery"], function (Ember, App, $) {
 
             App.ApplicationRoute = Ember.Route.extend({
                 title: "Microscratch",
 
-                model: function() {
+                model: function () {
                 },
 
-                setupController: function(controller, model) {
+                setupController: function (controller, model) {
                 }
+            });
+
+            App.ApplicationController = Ember.Controller.extend({
             });
 
             App.ApplicationView = Ember.View.extend({
                 classNames: ['app-view'],
-                templateName: "index",
+                templateName: "application",
 
                 /**
                  * Called when inserted to DOM.
@@ -46,6 +49,24 @@
                  */
                 didInsertElement: function () {
                     console.log("App.ApplicationView.didInsertElement()");
+
+                    var i = 0, words = [
+                        'love',
+                        'scrape',
+                        'clean',
+                        'organize',
+                        'distribute',
+                        '$ell'
+                    ];
+
+                    $('#changeOnClick').click(function () {
+                        i++;
+                        $(this).text(words[i]);
+                        if (i == words.length) {
+                            i = 0;
+                            $(this).text(words[0]);
+                        }
+                    });
                 }
             });
         }
