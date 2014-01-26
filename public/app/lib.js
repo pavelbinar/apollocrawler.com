@@ -45,6 +45,8 @@
 
                 // Routes
                 '../app/routes/application.js',
+                '../app/routes/about/index.js',
+                '../app/routes/contact/index.js',
 
                 // Templates
                 '../assets/templates.js',
