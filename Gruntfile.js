@@ -70,6 +70,7 @@ module.exports = function (grunt) {
 
         express: {
             custom: {
+                tasks: ['build'],
                 options: {
                     showStack: true,
                     port: config.server.port,
@@ -92,6 +93,15 @@ module.exports = function (grunt) {
                     out: "assets/bundle.js",
                     name: "js/main.js"
                 }
+            }
+        },
+
+        watch: {
+            templates: {
+                tasks: ['build'],
+                files: [
+                    path.join(__dirname, "public/**/*.hbs")
+                ]
             }
         }
     });
