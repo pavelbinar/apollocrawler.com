@@ -27,6 +27,8 @@
 
             App.Router.map(function() {
                 this.route("config", { path: "/config" });
+
+                // TODO: Add your routes below this line for easier merging
                 this.route("about", { path: "/about" });
                 this.route("contact", { path: "/contact" });
             });
