@@ -28,7 +28,7 @@
     module.exports = {
 
         _global: {
-            appName: "MicroScratch",
+            appName: "Apollo Crawler",
 
             client: {
                 configTemplate: path.join(__dirname, "public/js/config.template.js"),
