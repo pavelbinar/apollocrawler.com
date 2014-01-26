@@ -28,26 +28,6 @@
             socket: null,
 
             initialize: function () {
-                $(document).ready(function () {
-                    var i = 0,
-                        words = [
-                            'love',
-                            'scrape',
-                            'clean',
-                            'organize',
-                            'distribute',
-                            '$ell'
-                        ];
-
-                    $('#changeOnClick').click(function () {
-                        i++;
-                        $(this).text(words[i]);
-                        if (i == words.length) {
-                            i = 0;
-                            $(this).text(words[0]);
-                        }
-                    });
-                });
             }
         });
 
