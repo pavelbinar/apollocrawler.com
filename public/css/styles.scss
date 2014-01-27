@@ -44,7 +44,7 @@ html {
 
     .logo {
       font-size: 2em;
-      padding: 1em;
+      padding: 1em 1em 1em 0;
       display: inline-block;
       float: left;
 
@@ -137,29 +137,56 @@ html {
     }
     //rotator
 
-    .into-text {
-      font-style: italic;
-      font-weight: 300;
-      margin-top: 2em;
-
-      @media screen and (max-width: 768px) {
-        font-size: 1.5em;
-        margin-top: 1em;
-      }
-
-      @media screen and (min-width: 768px) {
-        font-size: 1.8em;
-      }
-
-      @media screen and (min-width: 992px) {
-        font-size: 2.2em;
-      }
-
-    }
-    //intro-text
-
   }
   //hero-message
+
+  .into-text {
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    strong {
+      font-weight: 400;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.8em;
+    }
+
+    @media screen and (min-width: 992px) {
+      font-size: 2.2em;
+    }
+  }
+  //intro-text
+
+  .about-us, .projects {
+    font-size: 1.2em;
+    font-weight: 300;
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+
+    img {
+      width: 100%;
+      //max-width: 4em;
+      padding: 0.2em;
+      margin-top: 3em;
+
+      @media screen and (max-width: $break-point-small) {
+       max-width: 12em;
+      }
+    }
+
+  }
+  // about-us
 
 }
 
