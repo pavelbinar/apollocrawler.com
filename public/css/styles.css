@@ -23,7 +23,7 @@ html {
       color: white; }
   #homepage .header .logo {
     font-size: 2em;
-    padding: 1em;
+    padding: 1em 1em 1em 0;
     display: inline-block;
     float: left; }
     @media screen and (max-width: 768px) {
@@ -80,17 +80,33 @@ html {
         font-weight: 300; }
       #homepage .hero-message .rotator .strong {
         font-weight: 700; }
-    #homepage .hero-message .into-text {
-      font-style: italic;
-      font-weight: 300;
-      margin-top: 2em; }
+  #homepage .into-text {
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 2em;
+    margin-bottom: 2em; }
+    #homepage .into-text strong {
+      font-weight: 400; }
+    @media screen and (max-width: 768px) {
+      #homepage .into-text {
+        font-size: 1.5em;
+        margin-top: 1em; } }
+    @media screen and (min-width: 768px) {
+      #homepage .into-text {
+        font-size: 1.8em; } }
+    @media screen and (min-width: 992px) {
+      #homepage .into-text {
+        font-size: 2.2em; } }
+  #homepage .about-us, #homepage .projects {
+    font-size: 1.2em;
+    font-weight: 300; }
+    #homepage .about-us h2, #homepage .projects h2 {
+      font-size: 1.5em;
+      font-weight: 400; }
+    #homepage .about-us img, #homepage .projects img {
+      width: 100%;
+      padding: 0.2em;
+      margin-top: 3em; }
       @media screen and (max-width: 768px) {
-        #homepage .hero-message .into-text {
-          font-size: 1.5em;
-          margin-top: 1em; } }
-      @media screen and (min-width: 768px) {
-        #homepage .hero-message .into-text {
-          font-size: 1.8em; } }
-      @media screen and (min-width: 992px) {
-        #homepage .hero-message .into-text {
-          font-size: 2.2em; } }
+        #homepage .about-us img, #homepage .projects img {
+          max-width: 12em; } }
