@@ -25,8 +25,8 @@
     (
         ["ember", "app"], function (Ember, App) {
 
-            App.ContactView = Ember.View.extend({
-                templateName: "contact/index"
+            App.ProjectsView = Ember.View.extend({
+                templateName: "projects/index"
             });
         }
     );
