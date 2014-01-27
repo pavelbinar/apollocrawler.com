@@ -86,7 +86,10 @@ git clone https://github.com/korczis/microscratch.git
   git clone http://github.com/korczis/microscratch.git
 
   # Install required node modules
-  npm install --dev
+  npm install
+  
+  # Or
+  sudo npm install
   
   # Install required bower modules
   bower install
