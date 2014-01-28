@@ -44,16 +44,14 @@
                         '$ell'
                     ];
 
-                    var self = this;
-                    function update() {
-                        setTimeout(function() {
-                            var len = words.length;
-                            $("#changeOnClick").text(words[i++ % len]);
-                            update();
-                        }, 3500);
-                    };
-
-                    update();
+                    $('#changeOnClick').click(function () {
+                        i++;
+                        $(this).text(words[i]);
+                        if (i == words.length) {
+                            i = 0;
+                            $(this).text(words[0]);
+                        }
+                    });
                 }
             });
         }
