@@ -2,6 +2,10 @@
 
 [apollocrawler.com](apollocrawler.com) website
 
+## Report
+
+[![Pingdom](https://share.pingdom.com/banners/189f0a99)](http://stats.pingdom.com/49gq27kjt2mp/1103041)
+
 ## Project Status
 
 [![GitHub version](https://badge.fury.io/gh/korczis%2Fmicroscratch.png)](http://badge.fury.io/gh/korczis%2Fmicroscratch)
