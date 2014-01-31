@@ -27,7 +27,7 @@
 
         _global: {
             app: {
-            	name: "MicroScratch",
+            	name: "apllocrawler.com",
 
                 // Google analytics section
                 googleAnalytics: {
