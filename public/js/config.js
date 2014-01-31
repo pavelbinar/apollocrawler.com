@@ -20,7 +20,7 @@
 
 //*
 define({
-    appName: "Apollo Crawler",
+    appName: "MicroScratch",
     shim: {
         "bootstrap": {
             deps: ["jquery"]
