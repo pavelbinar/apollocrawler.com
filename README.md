@@ -4,7 +4,7 @@
 
 ## Preview
 
-[![preview](https://raw2.github.com/pavelbinar/craftsmen/homepage/preview.png)](apollocrawler.com)
+[![preview](https://raw2.github.com/pavelbinar/craftsmen/homepage/preview.png)](http://apollocrawler.com)
 
 ## Project Status
 
