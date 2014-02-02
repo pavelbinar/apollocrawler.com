@@ -1,23 +1,20 @@
 //**********************
 //  IMPORTS
 //**********************
-
 //Google Fonts
 //Open Sans
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext);
-
-
 
 //**********************
 //  VARIABLES
 //**********************
 $primary-color: #ffffff;
 $secondary-color: #01203c;
+$link-normal: lighten($secondary-color, 75%);
+$link-active: lighten($secondary-color, 65%);
 $primary-font: 'Open Sans', sans-serif;
 $break-point-small: 768px;
 $break-point-large: 992px;
-
-
 
 //**********************
 //  GLOBAL STYLES
@@ -64,6 +61,26 @@ a {
 
 p {
   font-size: 1.2em;
+
+  a {
+    color: $link-normal;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-active;
+      text-decoration: none;
+    }
+
+    &:active, &:visited {
+      color: $link-normal;
+      text-decoration: none;
+
+      &:hover {
+        color: $link-active;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .avatar {
@@ -175,6 +192,7 @@ p {
   //rotator
 
 }
+
 //hero-message
 
 .into-text {
@@ -201,4 +219,5 @@ p {
   }
 
 }
+
 //intro-text
