@@ -42,6 +42,8 @@ p {
       p a:active:hover, p a:visited:hover {
         color: #8bc7fd;
         text-decoration: none; }
+  p .link-icon {
+    margin-right: 0.5em; }
 
 .avatar {
   width: 100%;
