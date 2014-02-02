@@ -44,6 +44,8 @@
                 // Routes
                 '../app/routes/application.js',
                 '../app/routes/about/index.js',
+                '../app/routes/datapacks/index.js',
+                '../app/routes/demo/index.js',
                 '../app/routes/projects/index.js',
 
                 // Templates
