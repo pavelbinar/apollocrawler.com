@@ -1,18 +1,27 @@
+//**********************
+//  IMPORTS
+//**********************
+
 //Google Fonts
 //Open Sans
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext);
 
-//variables
+
+
+//**********************
+//  VARIABLES
+//**********************
 $primary-color: #ffffff;
 $secondary-color: #01203c;
 $primary-font: 'Open Sans', sans-serif;
 $break-point-small: 768px;
 $break-point-large: 992px;
 
-body {
-  background: transparent;
-  font-family: $primary-font;
-}
+
+
+//**********************
+//  GLOBAL STYLES
+//**********************
 
 html {
   background: url('../img/homepage-bg.png') no-repeat center center fixed;
@@ -23,171 +32,173 @@ html {
   background-color: $secondary-color;
 }
 
-#homepage {
+body {
+  background: transparent;
+  font-family: $primary-font;
   color: $primary-color;
 
-  a {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: transparentize($primary-color, 0.25);
     text-decoration: none;
-    padding-bottom: 0.05em;
+  }
+
+  &:active, &:visited {
     color: $primary-color;
-
-    &:hover {
-      color: transparentize($primary-color, 0.25);
-    }
-
-    &:active, &:visited {
-      color: $primary-color;
-    }
+    text-decoration: none;
   }
-
-  .header {
-
-    .logo {
-      font-size: 2em;
-      padding: 1em 1em 1em 0;
-      display: inline-block;
-      float: left;
-
-      @media screen and (max-width: $break-point-small) {
-        text-align: center;
-        display: block;
-        float: none;
-        padding-bottom: 0;
-      }
-    }
-    //logo
-
-    .menu {
-      font-size: 1.5em;
-      float: right;
-      margin-top: 1.7em;
-
-      @media screen and (max-width: $break-point-small) {
-        float: none;
-        text-align: center;
-        margin-top: 0.5em;
-      }
-
-      ul {
-        margin: 0;
-        padding: 0;
-      }
-
-      li {
-        display: inline;
-        margin-left: 1.5em;
-
-        @media screen and (max-width: $break-point-small) {
-          margin-left: 0.5em;
-        }
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-      }
-      //li
-    }
-    //menu
-  }
-  //header
-
-  .hero-message {
-    text-align: center;
-    color: $primary-color;
-    margin: 0 auto;
-    margin-top: 2em;
-    max-width: 1000px;
-
-    .action {
-      font-weight: 400;
-      border-bottom: solid 0.09em $primary-color;
-
-      &:hover {
-        border-bottom: solid 0.09em transparentize($primary-color, 0.25);
-      }
-    }
-    //action
-
-    .rotator {
-      text-transform: uppercase;
-
-      @media screen and (max-width: $break-point-small) {
-        font-size: 2em;
-      }
-
-      @media screen and (min-width: $break-point-small) {
-        font-size: 5em;
-        margin-top: 1.5em;
-      }
-
-      @media screen and (min-width: $break-point-large) {
-        font-size: 6em;
-        margin-top: 2.5em;
-      }
-
-      .light {
-        font-weight: 300;
-      }
-
-      .strong {
-        font-weight: 700;
-      }
-
-    }
-    //rotator
-
-  }
-  //hero-message
-
-  .into-text {
-    font-style: italic;
-    font-weight: 300;
-    margin-top: 2em;
-    margin-bottom: 2em;
-
-    strong {
-      font-weight: 400;
-    }
-
-    @media screen and (max-width: 768px) {
-      font-size: 1.5em;
-      margin-top: 1em;
-    }
-
-    @media screen and (min-width: 768px) {
-      font-size: 1.8em;
-    }
-
-    @media screen and (min-width: 992px) {
-      font-size: 2.2em;
-    }
-  }
-  //intro-text
-
-  .about-us, .projects {
-    font-size: 1.2em;
-    font-weight: 300;
-
-    h2 {
-      font-size: 1.5em;
-      font-weight: 400;
-    }
-
-    img {
-      width: 100%;
-      //max-width: 4em;
-      padding: 0.2em;
-      margin-top: 3em;
-
-      @media screen and (max-width: $break-point-small) {
-       max-width: 12em;
-      }
-    }
-
-  }
-  // about-us
 
 }
 
-//homepage
+p {
+  font-size: 1.2em;
+}
+
+.avatar {
+  width: 100%;
+  padding: 0.2em;
+  margin-top: 3em;
+
+  @media screen and (max-width: $break-point-small) {
+    max-width: 12em;
+  }
+}
+
+.header {
+  font-weight: 400;
+
+  .logo {
+    font-size: 2em;
+    padding: 1em 1em 1em 0;
+    display: inline-block;
+    float: left;
+
+    @media screen and (max-width: $break-point-small) {
+      text-align: center;
+      display: block;
+      float: none;
+      padding-bottom: 0;
+    }
+  }
+  //logo
+
+  .menu {
+    font-size: 1.5em;
+    float: right;
+    margin-top: 1.7em;
+
+    @media screen and (max-width: $break-point-small) {
+      float: none;
+      text-align: center;
+      margin-top: 0.5em;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+      margin-left: 1.5em;
+
+      @media screen and (max-width: $break-point-small) {
+        margin-left: 0.5em;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+    }
+    //li
+  }
+  //menu
+}
+
+//header
+
+.hero-message {
+  text-align: center;
+  color: $primary-color;
+  margin: 0 auto;
+  margin-top: 2em;
+
+  .action {
+    font-weight: 400;
+    border-bottom: solid 0.09em $primary-color;
+
+    &:hover {
+      border-bottom: solid 0.09em transparentize($primary-color, 0.25);
+    }
+  }
+  //action
+
+  .rotator {
+    text-transform: uppercase;
+
+    @media screen and (max-width: $break-point-small) {
+      font-size: 2em;
+    }
+
+    @media screen and (min-width: $break-point-small) {
+      font-size: 5em;
+      margin-top: 1.5em;
+    }
+
+    @media screen and (min-width: $break-point-large) {
+      font-size: 6em;
+      margin-top: 2.5em;
+    }
+
+    .light {
+      font-weight: 300;
+    }
+
+    .strong {
+      font-weight: 700;
+    }
+
+  }
+  //rotator
+
+}
+//hero-message
+
+.into-text {
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  strong {
+    font-weight: 400;
+  }
+
+  @media screen and (max-width: $break-point-small) {
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+
+  @media screen and (min-width: $break-point-small) {
+    font-size: 1.8em;
+  }
+
+  @media screen and (min-width: $break-point-large) {
+    font-size: 2.2em;
+  }
+
+}
+//intro-text
