@@ -26,14 +26,16 @@
     module.exports = {
 
         _global: {
+            verbose: true,
+
             app: {
             	name: "apllocrawler.com",
 
                 // Google analytics section
                 googleAnalytics: {
-                    enabled: false,
-                    id: 'UA-XXXXXXXX-X',
-                    host: 'yourdomain.com'
+                    enabled: true,
+                    id: 'UA-47699219-1',
+                    host: 'apollocrawler.com'
                 }
             },
 
@@ -42,7 +44,6 @@
                 configDestination: path.join(__dirname, "public/js/config.js")
             },
 
-            verbose: true,
             mongo: {
                 uri: "mongodb://localhost:27017/data",
                 watcher: false
@@ -60,6 +61,7 @@
             },
 
             solr: {
+                enabled: true,
                 uri: "http://apollocrawler.com:8983/solr/apollo"
             }
         },
