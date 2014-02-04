@@ -30,6 +30,20 @@ a {
 
 p {
   font-size: 1.2em; }
+  p a {
+    color: #bedffe;
+    text-decoration: none; }
+    p a:hover {
+      color: #8bc7fd;
+      text-decoration: none; }
+    p a:active, p a:visited {
+      color: #bedffe;
+      text-decoration: none; }
+      p a:active:hover, p a:visited:hover {
+        color: #8bc7fd;
+        text-decoration: none; }
+  p .link-icon {
+    margin-right: 0.5em; }
 
 .avatar {
   width: 100%;
