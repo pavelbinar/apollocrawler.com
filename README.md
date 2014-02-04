@@ -9,10 +9,10 @@
 ## Project Status
 
 [![GitHub version](https://badge.fury.io/gh/korczis%2Fmicroscratch.png)](http://badge.fury.io/gh/korczis%2Fmicroscratch)
-[![Build Status](https://travis-ci.org/korczis/microscratch.png?branch=master)](https://travis-ci.org/korczis/microscratch)
+[![Build Status](https://travis-ci.org/ApolloCrawler/microscratch.png?branch=master)](https://travis-ci.org/ApolloCrawler/microscratch)
 [![Dependency Status](https://gemnasium.com/korczis/microscratch.png)](https://gemnasium.com/korczis/microscratch)
-[![Code Climate](https://codeclimate.com/repos/52e679aee30ba05f9a01374c/badges/518ba5511bb96351aa4e/gpa.png)](https://codeclimate.com/repos/52e679aee30ba05f9a01374c/feed)
-[![Total views](https://sourcegraph.com/api/repos/github.com/korczis/microscratch/counters/views.png)](https://sourcegraph.com/github.com/korczis/microscratch)
+[![Code Climate](https://codeclimate.com/repos/52eeccb869568029a80003ff/badges/3fd9b15792ebb7277355/gpa.png)](https://codeclimate.com/repos/52eeccb869568029a80003ff/feed)
+[![Total views](https://sourcegraph.com/api/repos/github.com/korczis/microscratch/counters/views.png)](https://sourcegraph.com/github.com/korczis/microscratch) 
 ## What microscratch is - first day in school
 
 ### What is the microscratch?
@@ -20,6 +20,11 @@
   microscratch is minimalistic opionated modern web application framework.
   
   For clarification of words and term used please see [glossary](https://github.com/korczis/microscratch/blob/master/GLOSSARY.md).
+
+### What are the principles?
+
+ * Being [idiomatic](https://github.com/rwaldron/idiomatic.js) - All code in any code-base should look like a single person typed it, no matter how many people contributed.
+ * Asking [smart questions](http://www.catb.org/~esr/faqs/smart-questions.html).
    
 ### Why is called microscratch?
 
@@ -36,7 +41,7 @@
   - It's quite modular
   - It's quite easy to understand
   - It's tested
-  - It's continously integrated
+  - It's continuously integrated
   - It's under the code QA
   - It's up-to-date
   
@@ -46,7 +51,7 @@
 
 ### Is it production ready?
 
-  It depends. If isthe node.js, mongo and/or ember are production ready for you then microscratch is ready too...
+  It depends. If is the node.js, mongo and/or ember are production ready for you then microscratch is ready too...
   
 ## Installation
 
@@ -97,13 +102,26 @@ git clone https://github.com/korczis/microscratch.git
   node app.js
   ```
 
+## Troubleshooting
+
+### Mac OS X
+
+If you run `grunt server` you may get an error:
+
+	Running "watch" task
+	Waiting...Warning: EMFILE, too many open files
+
+This is because default `ulimit` on Mac OS X is 256. Increate number of possibly open files to 10000 by:
+
+	ulimit -n 10000
+
 ## First start
 
-  - What is happening during the bootsequence?
+  - What is happening during the boot sequence?
   - What are the main configs?
   - Can I add my own initializers?
   - What are the steps in bootstrap process?
-  - How can I overide option from CLI?
+  - How can I override option from CLI?
 
 ## CLI
 
@@ -114,8 +132,8 @@ git clone https://github.com/korczis/microscratch.git
 ## Communication
 
 - How can I communicate?
-- How can I communicate horizontaly?
-- How can I coumunicate verticaly?
+- How can I communicate horizontally?
+- How can I communicate vertically?
 - How can I communicate between modules?
 - How can I communicate between apps?
 - How can I communicate between clients?
@@ -125,11 +143,11 @@ git clone https://github.com/korczis/microscratch.git
 
 - What technologies do you use?
 - What is the usage of technology 'XYZ' ?
-- Why was the technology 'XYZ' choosen instead of 'ABC' ?
+- Why was the technology 'XYZ' chosen instead of 'ABC' ?
 - Can I replace technology 'XYZ' with ... ?
 - Is the technology 'XYZ' needed? I can no use it? Do you have fallback?
 
-## DIY - Do It Yourserlf 
+## DIY - Do It Yourself 
 
 - How can I add my own environment?
 - How can I add my own module?
