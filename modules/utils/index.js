@@ -27,22 +27,38 @@
         merge = require('node.extend'),
         moment = require('moment'),
         path = require('path');
+
+    var exports = module.exports = {};
+
     /**
      * Returns loaded config with merged environments
      * @param path string Path to config file
      * @param env string Environment used
      */
-    module.exports.loadConfig = function (path, env) {
+    exports.loadConfig = function (configPath, env) {
         if (env === undefined || env === null) {
             env = "local";
         }
 
-        var tmp = require(path);
+        var tmp = require(configPath);
 
         var glob = tmp._global || {};
         var loc = tmp[env] || {};
 
-        return merge(true, glob, loc);
+        var res = merge(true, glob, loc);
+
+        var userConfig = configPath + ".user";
+        if (fs.existsSync(userConfig)) {
+            tmp = require(userConfig);
+
+            glob = tmp._global || {};
+            loc = tmp[env] || {};
+
+            var override = merge(true, glob, loc);
+            res = merge(true, res, override);
+        }
+
+        return res;
     };
 
     /**
@@ -51,7 +67,7 @@
      * @param prop Propert name in dot notation
      * @param value Value
      */
-    module.exports.setObjectProperty = function (obj, prop, value) {
+    exports.setObjectProperty = function (obj, prop, value) {
         if (typeof prop === "string") {
             prop = prop.split(".");
         }
@@ -75,7 +91,7 @@
      * @param dt Optional date time
      * @returns {*} Formatted timestamp
      */
-    module.exports.timestamp = function (fmt, dt) {
+    exports.timestamp = function (fmt, dt) {
         if (!fmt) {
             fmt = "YYYY/MM/DD HH:mm:ss.SSS";
         }
@@ -87,7 +103,7 @@
      * Returns UUID - Universaly Unique Identifier
      * @returns {*|string}
      */
-    module.exports.generateUUID = function () {
+    exports.generateUUID = function () {
         var d = new Date().getTime();
         var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
             var r = (d + Math.random() * 16) % 16 | 0;
@@ -102,7 +118,7 @@
      * @param dirPath Directory to process
      * @returns {Array} Array of nodes of that directory
      */
-    module.exports.getPathNodes = function (dirPath) {
+    exports.getPathNodes = function (dirPath) {
         var res = [];
 
         var files = fs.readdirSync(dirPath);
@@ -126,7 +142,7 @@
      * Print directory to console in `npm list` style using archy (https://github.com/substack/node-archy)
      * @param dirPath Path to print
      */
-    module.exports.printFileTree = function (dirPath) {
+    exports.printFileTree = function (dirPath) {
         var archy = require('archy');
         var s = archy({
             label: dirPath,
@@ -136,7 +152,13 @@
         console.log(s);
     };
 
-    module.exports.preprocessFile = function (source, destination, replacements) {
+    /**
+     * Simple templating function, takes source file, replaces replacements and writes result to destination file
+     * @param source Path to Source file including placeholders to be replaced
+     * @param destination Path to destination file where to write processed (with placeholders replaced) result file
+     * @param replacements Map with replacements, key will be replaced with target
+     */
+    exports.preprocessFile = function (source, destination, replacements) {
         var src = fs.readFileSync(source, 'utf8');
         var result = src.toString();
 
@@ -150,4 +172,20 @@
 
         fs.writeFileSync(destination, result, 'utf8');
     };
+
+    /**
+     * Merges to javascript objects
+     * @param orig Original object to be extended
+     * @param override Object with overrides
+     * @param deep True if deep merge is needed
+     * @returns {*}
+     */
+    exports.merge = function(orig, override, deep) {
+        if(deep) {
+            return merge(true, orig, override);
+        }
+
+        return (orig, override);
+    };
+
 }());
