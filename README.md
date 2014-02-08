@@ -10,9 +10,8 @@
 
 [![GitHub version](https://badge.fury.io/gh/korczis%2Fmicroscratch.png)](http://badge.fury.io/gh/korczis%2Fmicroscratch)
 [![Build Status](https://travis-ci.org/ApolloCrawler/apollocrawler.com.png?branch=master)](https://travis-ci.org/ApolloCrawler/apollocrawler.com)
-[![Dependency Status](https://gemnasium.com/ApolloCrawler/apollocrawler.com.png)](https://gemnasium.com/ApolloCrawler/apollocrawler.com)
 [![Code Climate](https://codeclimate.com/repos/52eeccb869568029a80003ff/badges/3fd9b15792ebb7277355/gpa.png)](https://codeclimate.com/repos/52eeccb869568029a80003ff/feed)
-[![Total views](https://sourcegraph.com/api/repos/github.com/ApolloCrawler/apollocrawler.com/counters/views.png)](https://sourcegraph.com/github.com/ApolloCrawler/apollocrawler.com) 
+[![Total views](https://sourcegraph.com/api/repos/github.com/ApolloCrawler/microscratch/counters/views.png)](https://sourcegraph.com/github.com/ApolloCrawler/microscratch) 
 ## What microscratch is - first day in school
 
 ### What is the microscratch?
